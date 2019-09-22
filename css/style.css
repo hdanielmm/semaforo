@@ -1,0 +1,66 @@
+* { box-sizing: border-box; } 
+
+.container {
+  border: 2px solid black;
+  width: 120px;
+  height: 400px;
+  margin: 120px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(46, 46, 46);
+}
+
+.light {
+  border: 1px solid black;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.redLight {
+  background-color: rgb(83, 0, 0);
+  animation-name: stop;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-start;
+}
+
+.yellowLight {
+  background-color: rgb(75, 75, 0);
+  animation-name: warning;
+  animation-duration: 11s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-start;
+}
+
+.greenLight {
+  background-color: rgb(0, 53, 0);
+  animation-name: go;
+  animation-delay: 6s;
+  animation-iteration-count: infinite;
+  animation-duration: 11s;
+  animation-timing-function: step-start;
+}
+
+@keyframes stop {
+  /* 1% {background-color: rgb(83, 0, 0);} */
+  45% {background-color: rgb(255, 0, 0);}
+  55% {background-color: rgb(83, 0, 0);}
+}
+
+@keyframes warning {
+  45% {background-color:  rgb(75, 75, 0); }
+  9% {background-color: yellow; }
+  46% {background-color:  rgb(75, 75, 0); }
+}
+
+@keyframes go {
+  55% {background-color:  rgb(0, 53, 0); }
+  45% {background-color: rgb(1, 255, 1); }
+  /* % {background-color:  rgb(0, 53, 0); } */
+}
+
+
+
